@@ -1,0 +1,193 @@
+@charset "UTF-8";
+* { padding: 0; margin: 0; list-style: none; text-decoration: none; color: inherit;font-family: helvetica, sans-serif;}
+a { color: inherit; text-decoration: none; }
+
+/* começa header */
+header {
+    background-image:url(../fotos/a.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height:300px;
+    overflow:hidden;
+    background-color: #C5151B;
+}
+
+header > h1{
+    text-align: center;
+    padding-top: 5%;
+    color: white;
+    font-size: 66px;
+}
+/* termina header */
+/* começa menu */
+
+
+	.dropdown-menu {
+		min-width: 200px;
+	}
+	.dropdown-menu.columns-2 {
+		min-width: 400px;
+	}
+	.dropdown-menu.columns-3 {
+		min-width: 600px;
+	}
+	.dropdown-menu li a {
+		padding: 5px 15px;
+		font-weight: 300;
+	}
+	.multi-column-dropdown {
+		list-style: none;
+	}
+	.multi-column-dropdown li a {
+		display: block;
+		clear: both;
+		line-height: 1.428571429;
+		color: #333;
+		white-space: normal;
+	}
+	.multi-column-dropdown li a:hover {
+		text-decoration: none;
+		color: #262626;
+		background-color: #f5f5f5;
+	}
+
+	@media (max-width: 767px) {
+		.dropdown-menu.multi-column {
+			min-width: 240px !important;
+			overflow-x: hidden;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.content {
+			width: 90%;
+			margin: 50px auto;
+			padding: 10px;
+		}
+	}
+
+/* termina menu*/
+/* começa slide */
+#slide {
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    box-shadow: 0px 0px 30px 0px #1a1a1a;
+}
+/* termina slide*/
+/* começa container*/
+
+#container {
+    width: 80%;
+    padding-top: 3%;
+    background-color:    #f7f7f7;
+    height: auto;
+    margin: 0 auto;
+}
+/* termina container*/
+/* começa conteudo*/
+
+#conteudo{
+
+}
+
+#conteudo > h1{
+    text-align: center;
+    color: #2C3E50;
+}
+
+#conteudo > p {
+    width: 80%;
+    height: auto;
+    text-align: justify;
+    color: #000;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin: 0 auto;
+}
+/* termina conteudo*/
+/* começa rodapé*/
+
+@media (min-width: 800px) {
+footer {
+    width: 100%;
+    clear: both;
+
+}
+
+.contatoRapido{
+
+    width: 100%;
+    clear: both;
+    height: auto;
+    background-color: #2C3E50;
+    padding-bottom: 10px;
+    padding-top: 5px;
+    position: relative;
+}
+.telefone{
+
+    color: white;
+    float: left;
+    margin-right: 104px;
+    margin-left: 20%;
+    padding-top: 10px;
+}
+
+.cop{
+
+    color: white;
+    padding-bottom: 15px;
+    padding-top: 10px;
+
+}
+
+.tituloRapido{
+
+    font-size: 18px;
+    color: white;
+}
+}
+@media (max-width: 800px) {
+footer {
+    width: 100%;
+    clear: both;
+
+}
+
+.contatoRapido{
+
+    width: 100%;
+    clear: both;
+    height: auto;
+    background-color: #CD985C;
+    padding-bottom: 10px;
+    padding-top: 5px;
+    position: relative;
+}
+.telefone{
+
+    color: white;
+    float: left;
+    margin-right: 104px;
+    margin-left: 20%;
+    padding-top: 10px;
+}
+
+.cop{
+
+    color: white;
+    padding-bottom: 15px;
+    padding-top: 10px;
+
+}
+
+.tituloRapido{
+
+    font-size: 18px;
+    color: white;
+}
+}
+/* termina rodapé*/

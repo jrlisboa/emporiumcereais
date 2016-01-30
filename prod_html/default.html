@@ -1,0 +1,174 @@
+<?php
+    include "scripts/conecta.php";
+?>
+
+<html>
+
+    <head>
+
+        <title> MaxiMix Armazém</title>
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
+        <link rel="stylesheet" type="text/css" href="../css/prod/default.css">
+        <link rel="stylesheet" type="text/css" href="../css/prod/default2.css">
+
+
+        <link href="../css/bootstrap-3.1.1.min.css" rel="stylesheet" type="text/css">
+        <link href='http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css' rel='stylesheet'>
+        <meta name="viewport" content="width=device-width, user-scalable=no">
+        <meta lang="pt-br">
+        <meta charset="utf-8">
+        <style>
+
+        </style>
+
+    </head>
+
+    <body>
+        <!-- começa header -->
+        <header>
+
+            <h1>Emporium - Cereais & CIA</h1>
+        </header>
+        <!-- acaba header -->
+        <!-- começa menu -->
+        <!--/.content-->
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <!--/.navbar-header-->
+
+           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="../index.html">Home</a></li>
+
+                <li class="dropdown">
+                    <a href="produtos.html" class="dropdown-toggle" data-toggle="dropdown">Produtos <b class="caret"></b></a>
+                    <ul class="dropdown-menu multi-column columns-3">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <ul class="multi-column-dropdown">
+
+                                    <?php
+                                        $query= sprintf("SELECT categoria FROM produtos");
+                                        $dados = mysql_query($query) or die (mysql_error());
+
+                                        $linha = mysql_fetch_assoc($dados);
+                                        $total = mysql_num_rows($dados);
+
+                                        if($total > 0) {
+                                            do{   ?>
+
+                                              <li><a href="#"><?=$linha['categoria']?></a></li>
+
+                                            <?php}while ($linha = mysql_fetch_assoc($dados));
+                                        }
+                                    ?>
+
+                                </ul>
+                            </div>
+                             <div class="col-sm-4">
+                                <ul class="multi-column-dropdown">
+
+
+                                    <li><a href="prod_html/doce.html">DOCES</a>
+                                    <li><a href="prod_html/frios.html">FARINÁCEOS</a></li>
+                                    <li><a href="prod_html/geleiaq.html">FRUTAS SECAS</a></li>
+                                    <li><a href="prod_html/geleiaz.html">GRÃOS</a></li>
+                                    <li><a href="prod_html/massa.html">LATICÍNEOS</a></li>
+                                    <li><a href="prod_html/molho.html">MEL E DERIVADOS</a></li>
+                                    <li><a href="prod_html/molhot.html">PRODUTOS SEM GLUTEN</a></li>
+                                </ul>
+                            </div>
+                             <div class="col-sm-4">
+                                <ul class="multi-column-dropdown">
+
+
+                                    <li><a href="prod_html/molhop.html">SEMENTES</a>
+                                    <li><a href="prod_html/petisco.html">DIVERSOS</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </ul>
+                </li>
+                <li><a href="localizacao.html">Localização</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </div>
+        <!--/.navbar-collapse-->
+    </nav>
+    <!--/.navbar-->
+
+        <!--acaba menu -->
+
+
+
+        <!-- começa container -->
+        <div id="container">
+                    <!-- começa conteudo -->
+
+            <div class="fotoprod1"> <p>ADOÇANTES</p> </div>
+
+
+            <div class="categoria">
+             <h1> CATEGORIAS</h1>
+
+                <p><a href="arroz.html"> ADOÇANTES</a></p>
+                <p><a href="azeite.html"> AZEITES / AZEITONAS</a></p>
+                <p><a href="bacalhau.html"> BISCOITOS</a></p>
+                <p><a href="cachaca.html"> CASTANHAS</a></p>
+                <p><a href="cerveja.html"> CEREAIS MATINAIS</a></p>
+                <p><a href="conserva.html"> CHÁS</a></p>
+                <p><a href="destilado.html"> CONCERVAS</a></p>
+                <p><a href="doce.html"> DERIVADOS DE SOJA</a></p>
+                <p><a href="frios.html"> DOCES</a></p>
+                <p><a href="geleiaq.html"> FARINÁCEOS</a></p>
+                <p><a href="geleiaz.html"> FRUTAS SECAS</a></p>
+                <p><a href="massa.html"> GRÃOS</a></p>
+                <p><a href="molho.html"> LATICÍNEOS</a></p>
+                <p><a href="molhot.html"> MEL E DERIVADOS</a></p>
+                <p><a href="molhop.html"> PRODUTOS SEM GLUTEN</a></p>
+                <p><a href="petisco.html"> SEMENTES</a></p>
+                <p><a href="queijo.html"> DIVERSOS</a></p>
+
+
+
+
+            </div>
+
+
+
+                        <!-- acaba conteudo -->
+
+        </div>
+                <!-- acaba container -->
+
+         <!-- começa rodapé -->
+        <footer>
+            <div class="contatoRapido" align="center">
+
+                <div class="telefone">
+                    <strong><span class="tituloRapido">Telefone :</span></strong>
+                    <span class="contRapido">(11) 4526-4855 </span>
+                </div>
+
+
+
+                <div class="cop">
+                    <span>Copyright © 2015 Maxi Mix Armazem | Designed by Appin</span>
+                </div>
+            </div>
+            </footer>
+
+        <!-- acaba rodapé -->
+     <!-------------------- JS -------------------->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap-3.1.1.min.js"></script>
+    </body>
+
+</html>

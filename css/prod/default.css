@@ -1,0 +1,74 @@
+
+/* começa container*/
+
+
+/* termina container*/
+/* começa conteudo*/
+
+
+@media (min-width: 800px) {
+
+    #container {
+    width: 80%;
+    height: 150%;
+    margin: 0 auto;
+}
+.categoria {
+    width: 20%;
+    margin-top: -7%;
+    height: 112%;
+    background-color: #C0392B;
+}
+
+
+.categoria h1 {
+    font-size: 1.2em;
+    text-align: center;
+    padding-top: 15%;
+    padding-bottom: 5%;
+    color: #ccc;
+}
+
+.categoria p {
+    padding-bottom: 15px;
+    text-align: center;
+}
+
+.categoria p a {
+	text-decoration:none;
+	color: white;
+	padding: 15px 10px;
+}
+
+.categoria p a:hover {
+	background-color:#1a1a1a;
+
+}
+}
+
+
+
+
+@media (max-width: 800px) {
+
+#container {
+    width: 8%;
+    height: 300%;
+    margin: 0 auto;
+}
+.categoria h1 {
+   display: none;
+}
+
+.categoria p {
+    display: none;
+}
+
+
+
+
+}
+/* termina conteudo*/
+/* começa rodapé*/
+
+/* termina rodapé*/
